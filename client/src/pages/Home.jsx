@@ -5,7 +5,7 @@ const Home = () => {
       <section className="h-[90vh] flex flex-col justify-center items-center text-center px-4">
         <h2 className="text-cyan-400 font-mono mb-4 text-lg">Hi, my name is</h2>
         <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-          Your Name.
+          Imesh Bandara.
         </h1>
         <h3 className="text-3xl md:text-5xl font-semibold text-slate-400 mb-8">
           I build full-stack web applications.

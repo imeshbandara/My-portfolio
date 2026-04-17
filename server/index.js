@@ -2,6 +2,7 @@ import express from "express";
 import dotenv from "dotenv";
 import cors from "cors";
 import connectDB from "./config/db.js";
+import projectRoutes from './routes/projectRoutes.js';
 
 
 dotenv.config();
@@ -14,6 +15,8 @@ const app = express();
 
 app.use(cors());
 app.use(express.json());
+
+app.use('/api/projects', projectRoutes);
 
 //mongodb+srv://portfolio_user:123456imeshnb@cluster0.pf9ql4o.mongodb.net/?appName=Cluster0
 // 123456imeshnb , portfolio_user

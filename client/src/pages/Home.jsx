@@ -1,3 +1,5 @@
+import Projects from '../components/Projects';
+
 const Home = () => {
   return (
     <main className="pt-20">
@@ -20,6 +22,9 @@ const Home = () => {
           </button>
         </div>
       </section>
+
+      <Projects />
+
     </main>
   );
 };

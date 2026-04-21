@@ -1,35 +1,65 @@
+import profileImg from '../assets/profile.jpeg'; 
+import About from '../components/About';
 import Projects from '../components/Projects';
 import Contact from '../components/Contact';
-import About from '../components/About';
-
 
 const Home = () => {
   return (
-    <main className="pt-20">
-      {/* Hero Section */}
-      <section className="h-[90vh] flex flex-col justify-center items-center text-center px-4">
-        <h2 className="text-cyan-400 font-mono mb-4 text-lg">Hi, my name is</h2>
-        <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-          Imesh Bandara.
-        </h1>
-        <h3 className="text-3xl md:text-5xl font-semibold text-slate-400 mb-8">
-          I build full-stack web applications.
-        </h3>
-        <p className="max-w-xl text-slate-400 text-lg mb-10">
-          I'm a Software Engineering student at the University of Kelaniya, 
-          specializing in the MERN stack and Spring Boot.
-        </p>
-        <div className="flex gap-4">
-          <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-md hover:bg-cyan-400/10 transition">
-            Check out my work!
-          </button>
+    <main className="bg-[#0f172a]">
+      {/* HERO SECTION */}
+      <section className="min-h-screen flex items-center justify-center px-6 pt-20">
+        <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12">
+          
+          {/* Text Content */}
+          <div className="flex-1 text-center md:text-left">
+            <h2 className="text-cyan-400 font-mono mb-4 text-lg">Hi, my name is</h2>
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+              Imesh Bandara.
+            </h1>
+            <h3 className="text-3xl md:text-5xl font-semibold text-slate-400 mb-6 leading-tight">
+              I build high-performance full-stack applications.
+            </h3>
+            
+            {/* Added your specific paragraph here */}
+            <p className="max-w-xl text-slate-400 text-lg mb-10 mx-auto md:mx-0">
+              I'm a Software Engineering student at the University of Kelaniya, 
+              specializing in the MERN stack and Spring Boot.
+            </p>
+
+            <div className="flex justify-center md:justify-start gap-4">
+              <a 
+                href="#projects" 
+                className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-md hover:bg-cyan-400/10 transition font-mono"
+              >
+                See my work
+              </a>
+            </div>
+          </div>
+
+          {/* Image Content */}
+          <div className="flex-1 flex justify-center">
+            <div className="relative group">
+              {/* Decorative border behind the image */}
+              <div className="absolute -inset-4 border-2 border-cyan-400 rounded-xl translate-x-2 translate-y-2 group-hover:translate-x-0 group-hover:translate-y-0 transition-transform duration-300"></div>
+              
+              <img 
+                src={profileImg} 
+                alt="Imesh Bandara" 
+                className="relative w-64 h-64 md:w-80 md:h-80 object-cover rounded-xl grayscale hover:grayscale-0 transition-all duration-300 border-2 border-slate-800 bg-[#1e293b]"
+              />
+            </div>
+          </div>
+
         </div>
       </section>
 
       <About />
       <Projects />
       <Contact />
-
+      
+      <footer className="py-10 text-center text-slate-500 text-sm font-mono">
+        Built with MERN Stack © 2026 Imesh Bandara
+      </footer>
     </main>
   );
 };

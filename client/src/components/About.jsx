@@ -9,12 +9,12 @@ const About = () => {
   return (
     <section id="about" className="py-24">
       <div className="max-w-6xl mx-auto px-4 md:px-12">
-        <h2 className="text-3xl font-bold text-white mb-12 flex items-center">
-          <span className="text-cyan-400 font-mono mr-2">01.</span> About Me
+        <h2 className="text-4xl font-bold text-white mb-12 flex items-center">
+          <span className="text-cyan-400 font-mono text-xl mr-2">01.</span> About Me
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-          <div className="text-slate-400 space-y-4 text-lg">
+          <div className="text-slate-400 space-y-4 text-lg leading-relaxed">
             <p>
               Hello! I'm <span className="text-cyan-400">Imesh Bandara</span>, a passionate Software Engineering student at the 
               <span className="text-white"> University of Kelaniya</span>. I enjoy creating things that live on the internet.
@@ -32,26 +32,26 @@ const About = () => {
 
           <div className="grid grid-cols-2 gap-4">
             <div className="bg-[#1e293b] p-4 rounded-lg border border-slate-800">
-              <h3 className="text-cyan-400 font-bold mb-3 uppercase text-xs tracking-widest">Frontend</h3>
-              <ul className="text-slate-300 text-sm space-y-1">
+              <h3 className="text-cyan-400 font-bold mb-3 uppercase text-sm tracking-widest">Frontend</h3>
+              <ul className="text-slate-300 text-base space-y-1">
                 {skills.frontend.map(skill => <li key={skill}>▹ {skill}</li>)}
               </ul>
             </div>
             <div className="bg-[#1e293b] p-4 rounded-lg border border-slate-800">
-              <h3 className="text-cyan-400 font-bold mb-3 uppercase text-xs tracking-widest">Backend</h3>
-              <ul className="text-slate-300 text-sm space-y-1">
+              <h3 className="text-cyan-400 font-bold mb-3 uppercase text-sm tracking-widest">Backend</h3>
+              <ul className="text-slate-300 text-base space-y-1">
                 {skills.backend.map(skill => <li key={skill}>▹ {skill}</li>)}
               </ul>
             </div>
             <div className="bg-[#1e293b] p-4 rounded-lg border border-slate-800">
-              <h3 className="text-cyan-400 font-bold mb-3 uppercase text-xs tracking-widest">Database</h3>
-              <ul className="text-slate-300 text-sm space-y-1">
+              <h3 className="text-cyan-400 font-bold mb-3 uppercase text-sm tracking-widest">Database</h3>
+              <ul className="text-slate-300 text-base space-y-1">
                 {skills.database.map(skill => <li key={skill}>▹ {skill}</li>)}
               </ul>
             </div>
             <div className="bg-[#1e293b] p-4 rounded-lg border border-slate-800">
-              <h3 className="text-cyan-400 font-bold mb-3 uppercase text-xs tracking-widest">Tools</h3>
-              <ul className="text-slate-300 text-sm space-y-1">
+              <h3 className="text-cyan-400 font-bold mb-3 uppercase text-sm tracking-widest">Tools</h3>
+              <ul className="text-slate-300 text-base space-y-1">
                 {skills.tools.map(skill => <li key={skill}>▹ {skill}</li>)}
               </ul>
             </div>

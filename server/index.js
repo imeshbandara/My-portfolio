@@ -33,3 +33,5 @@ app.listen(PORT,
      () => {
         console.log("Server running on port 5001 ")
       });
+
+      //npx nodemon index.js

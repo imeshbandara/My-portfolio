@@ -1,9 +1,9 @@
 const Contact = () => {
   return (
     <section id="contact" className="py-20 px-6 max-w-3xl mx-auto text-center">
-      <h2 className="text-cyan-400 font-mono mb-4">02. What's Next?</h2>
-      <h1 className="text-5xl font-bold text-white mb-6">Get In Touch</h1>
-      <p className="text-slate-400 mb-10 text-lg">
+      <h2 className="text-cyan-400 font-mono text-xl mb-4">04. What's Next?</h2>
+      <h1 className="text-6xl font-bold text-white mb-6">Get In Touch</h1>
+      <p className="text-slate-400 mb-10 text-xl leading-relaxed">
         I'm currently looking for internship opportunities or freelance projects. 
         Whether you have a question or just want to say hi, my inbox is always open!
       </p>
@@ -15,7 +15,7 @@ const Contact = () => {
         Say Hello
       </a>
 
-      <div className="mt-16 flex justify-center gap-8 text-slate-400">
+      <div className="mt-16 flex justify-center gap-8 text-slate-400 text-lg">
         <a href="https://github.com/imeshbandara" className="hover:text-cyan-400 transition">GitHub</a>
         <a href="https://linkedin.com/in/imesh-bandara-57a129388" className="hover:text-cyan-400 transition">LinkedIn</a>
       </div>

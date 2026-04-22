@@ -1,27 +1,28 @@
 import profileImg from '../assets/profile.jpeg'; 
 import About from '../components/About';
 import Projects from '../components/Projects';
+import BlogSection from '../components/BlogSection';
 import Contact from '../components/Contact';
 
 const Home = () => {
   return (
     <main className="bg-[#0f172a]">
       {/* HERO SECTION */}
-      <section className="min-h-screen flex items-center justify-center px-6 pt-20">
+      <section id="home" className="min-h-screen flex items-center justify-center px-6 pt-20">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12">
           
           {/* Text Content */}
           <div className="flex-1 text-center md:text-left">
-            <h2 className="text-cyan-400 font-mono mb-4 text-lg">Hi, my name is</h2>
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+            <h2 className="text-cyan-400 font-mono mb-4 text-xl">Hi, my name is</h2>
+            <h1 className="text-6xl md:text-8xl font-bold text-white mb-6">
               Imesh Bandara.
             </h1>
-            <h3 className="text-3xl md:text-5xl font-semibold text-slate-400 mb-6 leading-tight">
+            <h3 className="text-4xl md:text-6xl font-semibold text-slate-400 mb-6 leading-tight">
               I build high-performance full-stack applications.
             </h3>
             
             {/* Added your specific paragraph here */}
-            <p className="max-w-xl text-slate-400 text-lg mb-10 mx-auto md:mx-0">
+            <p className="max-w-xl text-slate-400 text-xl leading-relaxed mb-10 mx-auto md:mx-0">
               I'm a Software Engineering student at the University of Kelaniya, 
               specializing in the MERN stack and Spring Boot.
             </p>
@@ -55,9 +56,10 @@ const Home = () => {
 
       <About />
       <Projects />
+      <BlogSection />
       <Contact />
       
-      <footer className="py-10 text-center text-slate-500 text-sm font-mono">
+      <footer className="py-10 text-center text-slate-500 text-base font-mono">
         Built with MERN Stack © 2026 Imesh Bandara
       </footer>
     </main>

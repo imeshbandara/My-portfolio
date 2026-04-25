@@ -10,7 +10,7 @@ const ProjectCard = ({ project }) => {
       </div>
       <div className="p-6">
         <h3 className="text-xl font-bold text-white mb-2">{project.title}</h3>
-        <p className="text-slate-400 text-sm mb-4 line-clamp-3">
+        <p className="text-slate-400 text-base leading-relaxed mb-4 line-clamp-3">
           {project.description}
         </p>
         <div className="flex flex-wrap gap-2 mb-6">
@@ -21,8 +21,8 @@ const ProjectCard = ({ project }) => {
           ))}
         </div>
         <div className="flex gap-4">
-          <a href={project.githubLink} className="text-slate-400 hover:text-white transition">GitHub</a>
-          <a href={project.liveLink} className="text-slate-400 hover:text-white transition">Live Demo</a>
+          <a href={project.githubLink} className="text-slate-400 text-base hover:text-white transition">GitHub</a>
+          <a href={project.liveLink} className="text-slate-400 text-base hover:text-white transition">Live Demo</a>
         </div>
       </div>
     </div>

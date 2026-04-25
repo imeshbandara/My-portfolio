@@ -1,7 +1,7 @@
 const Contact = () => {
   return (
     <section id="contact" className="py-20 px-6 max-w-3xl mx-auto text-center">
-      <h2 className="text-cyan-400 font-mono text-xl mb-4">04. What's Next?</h2>
+      <h2 className="text-cyan-400 font-mono text-xl mb-4">05. What's Next?</h2>
       <h1 className="text-6xl font-bold text-white mb-6">Get In Touch</h1>
       <p className="text-slate-400 mb-10 text-xl leading-relaxed">
         I'm currently looking for internship opportunities or freelance projects. 

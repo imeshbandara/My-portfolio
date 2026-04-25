@@ -1,5 +1,6 @@
 import profileImg from '../assets/profile.jpeg'; 
 import About from '../components/About';
+import Experience from '../components/Experience';
 import Projects from '../components/Projects';
 import BlogSection from '../components/BlogSection';
 import Contact from '../components/Contact';
@@ -55,6 +56,7 @@ const Home = () => {
       </section>
 
       <About />
+      <Experience />
       <Projects />
       <BlogSection />
       <Contact />

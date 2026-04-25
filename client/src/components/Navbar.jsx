@@ -31,6 +31,7 @@ const Navbar = ()=>{
         <div className="space-x-8 hidden md:flex text-lg">
           <a href="#home" onClick={handleScroll('home')} className="text-slate-300 hover:text-cyan-400 transition">Home</a>
           <a href="#about" onClick={handleScroll('about')} className="text-slate-300 hover:text-cyan-400 transition">About</a>
+          <a href="#experience" onClick={handleScroll('experience')} className="text-slate-300 hover:text-cyan-400 transition">Experience</a>
           <a href="#projects" onClick={handleScroll('projects')} className="text-slate-300 hover:text-cyan-400 transition">Projects</a>
           <Link to="/blog" className="text-slate-300 hover:text-cyan-400 transition">Blog</Link>
           <a href="#contact" onClick={handleScroll('contact')} className="text-slate-300 hover:text-cyan-400 transition">Contact</a>

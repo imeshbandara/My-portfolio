@@ -8,6 +8,7 @@ const projects = [
   {
     title: "VisitCeylonX",
     description: "A comprehensive tourism platform for Sri Lanka featuring an AI travel itinerary planner.",
+    category: "Individual",
     techStack: ["MongoDB", "Express", "React", "Node.js"],
     githubLink: "https://github.com/imeshbandara/visitceylonx",
     liveLink: "#",
@@ -16,6 +17,7 @@ const projects = [
   {
     title: "Scoop Heaven",
     description: "A dynamic ice cream shop website with administrative order management and flavor tracking.",
+    category: "Group",
     techStack: ["PHP", "MySQL", "Tailwind CSS"],
     githubLink: "https://github.com/imeshbandara/scoop-heaven",
     liveLink: "#",
@@ -25,7 +27,12 @@ const projects = [
 
 const seedDB = async () => {
   try {
-    await mongoose.connect(process.env.MONGO_URI);
+    const mongoUri =
+      process.env.MONGO_URI ||
+      process.env.MONGODB_URI ||
+      "mongodb://127.0.0.1:27017/portfolio";
+
+    await mongoose.connect(mongoUri);
 
     await Project.deleteMany(); // Clears existing projects
     await Project.insertMany(projects);

@@ -50,7 +50,7 @@ const BlogSection = ({ variant = 'section', limit = 6 }) => {
     <>
       <header className="mb-12">
         <h2 className="text-4xl font-bold text-white flex items-center">
-          <span className="text-cyan-400 font-mono text-xl mr-2">03.</span> Blog
+          <span className="text-cyan-400 font-mono text-xl mr-2">04.</span> Blog
         </h2>
         <p className="text-slate-400 text-lg leading-relaxed mt-3">
           Latest articles synced from my Medium profile.

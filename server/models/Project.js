@@ -4,6 +4,11 @@ const ProjectSchema = new mongoose.Schema(
   {
     title: { type: String, required: true },
     description: { type: String, required: true },
+    category: {
+      type: String,
+      enum: ["Individual", "Group"],
+      required: true,
+    },
     techStack: [String], // Example: ["React", "Node.js", "MongoDB"]
     githubLink: String,
     liveLink: String,

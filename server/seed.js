@@ -22,6 +22,24 @@ const projects = [
     githubLink: "https://github.com/imeshbandara/scoop-heaven",
     liveLink: "#",
     image: "https://via.placeholder.com/600x400"
+  },
+  {
+    title: "House-renting-website",
+    description: "A samlle house renting website i did with my frinds using php & mysql.",
+    category: "Group",
+    techStack: ["html", "CSS", "php", "MySQL"],
+    githubLink: "https://github.com/imeshbandara/house-renting-website",
+    liveLink: "#",
+    image: "https://via.placeholder.com/600x400"
+  },
+  {
+    title: "Architecture Group Project",
+    description: "A collaborative project focused on modular software design.",
+    category: "Group",
+    techStack: ["Java", "Spring Boot", "React", "MySQL"],
+    githubLink: "https://github.com/imeshbandara/architecture_project",
+    liveLink: "#",
+    image: "https://via.placeholder.com/600x400"
   }
 ];
 

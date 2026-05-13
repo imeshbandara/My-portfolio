@@ -122,29 +122,29 @@ export const skillsData = {
 export const blogData = [
   {
     id: 1,
-    title: "Mastering the MERN Stack: A Comprehensive Guide",
-    description: "Deep dive into building scalable full-stack applications using MongoDB, Express, React, and Node.js with best practices.",
-    date: "May 10, 2024",
-    tags: ["#MERN", "#WebDev", "#FullStack"],
-    link: "https://medium.com/@imeshbandara",
-    image: "https://images.unsplash.com/photo-1633356122544-f134324a6cee?q=80&w=1470&auto=format&fit=crop"
+    title: "JWT Authentication Done Right: The Definitive Guide to Secure Tokens",
+    description: "An in-depth guide that goes beyond basic implementation to address critical security flaws in modern web applications. It explores best practices for securing JSON Web Tokens, common vulnerabilities to avoid, and strategies for robust authentication.",
+    date: "April 27, 2026",
+    tags: ["#JWT", "#WebSecurity", "#Authentication", "#CyberSecurity", "#WebDevelopment"],
+    link: "https://medium.com/@imeshbandara525/jwt-authentication-done-right-the-definitive-guide-to-secure-tokens-377323eab009",
+    image: "https://miro.medium.com/v2/resize:fit:720/format:webp/1*U5ugzWMxfmwLdNCVzsxSEA.jpeg"
   },
   {
     id: 2,
-    title: "Enterprise Architecture with Spring Boot & Java",
-    description: "Exploring modular software design and scalable backend architectures for modern enterprise reservation systems.",
-    date: "April 22, 2024",
-    tags: ["#Java", "#SpringBoot", "#Backend"],
-    link: "https://medium.com/@imeshbandara",
-    image: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1470&auto=format&fit=crop"
+    title: "Supervised vs. Unsupervised Learning: A Comprehensive Deep Learning Breakdown",
+    description: "A detailed exploration of the two primary paradigms in machine learning. The article breaks down the fundamental differences between supervised and unsupervised learning, their unique architectures, and real-world applications in the field of deep learning.",
+    date: "May 10, 2026",
+    tags: ["#MachineLearning", "#DeepLearning", "#SupervisedLearning", "#UnsupervisedLearning", "#DataScience", "#AI"],
+    link: "https://medium.com/@imeshbandara525/supervised-vs-unsupervised-learning-a-comprehensive-deep-learning-breakdown-99ebcb037402",
+    image: "https://www.aiu.edu/wp-content/uploads/2024/08/where-is-ai-used-1024x683-1.jpg"
   },
   {
     id: 3,
-    title: "AI in Tourism: Building VisitCeylonX",
-    description: "How we integrated AI-powered travel itinerary planning into a comprehensive tourism platform for Sri Lanka.",
-    date: "March 15, 2024",
-    tags: ["#AI", "#Tourism", "#NextJS"],
-    link: "https://medium.com/@imeshbandara",
-    image: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?q=80&w=1469&auto=format&fit=crop"
+    title: "Understanding Software Licenses in 2025: A Guide to What’s Out There",
+    description: "A modern overview of software licensing models, explaining the differences between proprietary, open-source, and permissive licenses. It provides clarity on how developers and organizations can navigate legal requirements and choose the right licensing strategy for their projects.",
+    date: "May 12, 2026",
+    tags:["#SoftwareLicensing", "#OpenSource", "#IntellectualProperty", "#SoftwareDevelopment", "#LegalTech", "#TechTrends"],
+    link: "https://medium.com/@imeshbandara525/understanding-software-licenses-in-2025-a-guide-to-whats-out-there-41ea7d2d3dc9",
+    image: "https://miro.medium.com/v2/resize:fit:640/format:webp/1*wK0KWMyuCKI4vc1KYuaoNQ.jpeg"
   }
 ];

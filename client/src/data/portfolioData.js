@@ -84,3 +84,36 @@ export const experienceData = [
     iconText: 'MERN',
   },
 ];
+
+// ── Skills Data ───────────────────────────────────────────
+import { 
+  SiReact, SiNextdotjs, SiTailwindcss, SiJavascript,
+  SiNodedotjs, SiExpress, SiSpringboot, 
+  SiMongodb, SiMysql, SiPostgresql,
+  SiGit, SiDocker, SiPostman, SiVite 
+} from 'react-icons/si';
+import { FaJava } from 'react-icons/fa6';
+
+export const skillsData = {
+  frontend: [
+    { name: "React", icon: SiReact },
+    { name: "Next.js", icon: SiNextdotjs },
+    { name: "Tailwind CSS", icon: SiTailwindcss },
+    { name: "JavaScript (ES6+)", icon: SiJavascript },
+  ],
+  backend: [
+    { name: "Node.js", icon: SiNodedotjs },
+    { name: "Express", icon: SiExpress },
+    { name: "Spring Boot", icon: SiSpringboot },
+    { name: "Java", icon: FaJava },
+  ],
+  databaseTools: [
+    { name: "MongoDB", icon: SiMongodb },
+    { name: "MySQL", icon: SiMysql },
+    { name: "PostgreSQL", icon: SiPostgresql },
+    { name: "Git", icon: SiGit },
+    { name: "Docker", icon: SiDocker },
+    { name: "Postman", icon: SiPostman },
+    { name: "Vite", icon: SiVite },
+  ],
+};

@@ -117,3 +117,34 @@ export const skillsData = {
     { name: "Vite", icon: SiVite },
   ],
 };
+
+// ── Blog Data ─────────────────────────────────────────────
+export const blogData = [
+  {
+    id: 1,
+    title: "Mastering the MERN Stack: A Comprehensive Guide",
+    description: "Deep dive into building scalable full-stack applications using MongoDB, Express, React, and Node.js with best practices.",
+    date: "May 10, 2024",
+    tags: ["#MERN", "#WebDev", "#FullStack"],
+    link: "https://medium.com/@imeshbandara",
+    image: "https://images.unsplash.com/photo-1633356122544-f134324a6cee?q=80&w=1470&auto=format&fit=crop"
+  },
+  {
+    id: 2,
+    title: "Enterprise Architecture with Spring Boot & Java",
+    description: "Exploring modular software design and scalable backend architectures for modern enterprise reservation systems.",
+    date: "April 22, 2024",
+    tags: ["#Java", "#SpringBoot", "#Backend"],
+    link: "https://medium.com/@imeshbandara",
+    image: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1470&auto=format&fit=crop"
+  },
+  {
+    id: 3,
+    title: "AI in Tourism: Building VisitCeylonX",
+    description: "How we integrated AI-powered travel itinerary planning into a comprehensive tourism platform for Sri Lanka.",
+    date: "March 15, 2024",
+    tags: ["#AI", "#Tourism", "#NextJS"],
+    link: "https://medium.com/@imeshbandara",
+    image: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?q=80&w=1469&auto=format&fit=crop"
+  }
+];

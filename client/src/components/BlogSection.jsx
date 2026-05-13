@@ -1,141 +1,76 @@
-import { useEffect, useMemo, useState } from 'react';
+import React from 'react';
+import { blogData } from '../data/portfolioData';
+import { FiArrowRight } from 'react-icons/fi';
 
-const RSS2JSON_URL =
-  'https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@imeshbandara';
-
-function stripHtml(html = '') {
-  return html.replace(/<[^>]*>?/gm, '').trim();
-}
-
-const BlogSection = ({ variant = 'section', limit = 6 }) => {
-  const [articles, setArticles] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState('');
-
-  useEffect(() => {
-    let cancelled = false;
-
-    const fetchMedium = async () => {
-      try {
-        const res = await fetch(RSS2JSON_URL);
-        if (!res.ok) throw new Error(`HTTP ${res.status}`);
-        const data = await res.json();
-        if (cancelled) return;
-        setArticles(data?.items ?? []);
-      } catch (err) {
-        console.error('Error fetching Medium posts:', err);
-        if (cancelled) return;
-        setError('Failed to load articles. Please try again later.');
-      } finally {
-        if (!cancelled) setLoading(false);
-      }
-    };
-
-    fetchMedium();
-    return () => {
-      cancelled = true;
-    };
-  }, []);
-
-  const visibleArticles = useMemo(() => {
-    const n = typeof limit === 'number' ? limit : 6;
-    return (articles ?? []).slice(0, Math.max(0, n));
-  }, [articles, limit]);
-
-  const containerClassName =
-    variant === 'page' ? 'max-w-6xl mx-auto' : 'max-w-6xl mx-auto px-4 md:px-12';
-
-  const inner = (
-    <>
-      <header className="mb-12">
-        <h2 className="text-4xl font-bold text-white flex items-center">
-          <span className="text-cyan-400 font-mono text-xl mr-2">04.</span> Blog
-        </h2>
-        <p className="text-slate-400 text-lg leading-relaxed mt-3">
-          Latest articles synced from my Medium profile.
-        </p>
-      </header>
-
-      {loading ? (
-        <div className="text-center text-white">Loading articles...</div>
-      ) : error ? (
-        <div className="rounded-xl border border-red-500/30 bg-red-500/10 p-5 text-red-200">
-          {error}
-        </div>
-      ) : visibleArticles.length === 0 ? (
-        <div className="rounded-xl border border-slate-800 bg-[#111c33] p-6 text-slate-300">
-          No articles found yet.
-        </div>
-      ) : (
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {visibleArticles.map((post) => {
-            const date = post?.pubDate ? new Date(post.pubDate) : null;
-            const thumbnail = post?.thumbnail || '';
-            const excerpt = stripHtml(post?.description || '');
-
-            return (
-              <article
-                key={post.guid || post.link}
-                className="group overflow-hidden rounded-2xl border border-slate-800 bg-[#111c33] hover:border-cyan-500/60 transition"
-              >
-                <div className="aspect-[16/9] w-full bg-[#0b1223] overflow-hidden">
-                  {thumbnail ? (
-                    <img
-                      src={thumbnail}
-                      alt={post?.title || 'Medium article thumbnail'}
-                      className="h-full w-full object-cover group-hover:scale-105 transition duration-500"
-                      loading="lazy"
-                    />
-                  ) : (
-                    <div className="h-full w-full flex items-center justify-center text-slate-500 font-mono text-base">
-                      No image
-                    </div>
-                  )}
-                </div>
-
-                <div className="p-5">
-                    <div className="text-cyan-400 font-mono text-sm">
-                    {date ? date.toLocaleDateString() : '—'}
-                  </div>
-                  <h3 className="mt-2 text-lg font-bold text-white leading-snug group-hover:text-cyan-400 transition">
-                    {post?.title}
-                  </h3>
-                  {excerpt ? (
-                      <p className="mt-3 text-slate-400 text-base leading-relaxed line-clamp-3">
-                      {excerpt}
-                    </p>
-                  ) : null}
-
-                  <div className="mt-4">
-                    <a
-                      href={post.link}
-                      target="_blank"
-                      rel="noreferrer"
-                        className="inline-flex items-center gap-2 text-cyan-400 font-mono text-base hover:underline"
-                    >
-                      Read on Medium →
-                    </a>
-                  </div>
-                </div>
-              </article>
-            );
-          })}
-        </div>
-      )}
-    </>
-  );
-
-  if (variant === 'page') {
-    return (
-      <div className="min-h-screen bg-[#0f172a] pt-32 px-6">
-        <div className={containerClassName}>{inner}</div>
-      </div>
-    );
-  }
-
+const BlogSection = () => {
   return (
-    <section id="blog" className="py-24">
-      <div className={containerClassName}>{inner}</div>
+    <section id="blog" className="py-24 bg-[#0f172a]">
+      <div className="max-w-6xl mx-auto px-4 md:px-12">
+        {/* Centered Heading */}
+        <header className="mb-16 text-center">
+          <h2 className="text-4xl font-bold text-white flex items-center justify-center">
+            <span className="text-cyan-400 font-mono text-xl mr-2">04.</span> Useful Reads
+          </h2>
+          <p className="text-slate-400 text-lg leading-relaxed mt-4 max-w-2xl mx-auto">
+            Insights, tutorials, and perspectives on modern software development.
+          </p>
+        </header>
+
+        {/* Modern Box Layout (Grid) */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {blogData.map((post) => (
+            <article
+              key={post.id}
+              className="group flex flex-col bg-[#1e293b] rounded-2xl border border-slate-700/50 overflow-hidden hover:-translate-y-2 hover:border-cyan-400/50 hover:shadow-[0_0_40px_rgba(34,211,238,0.1)] transition-all duration-500"
+            >
+              {/* Featured Image */}
+              <div className="h-52 overflow-hidden relative">
+                <img
+                  src={post.image}
+                  alt={post.title}
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#1e293b] to-transparent opacity-60" />
+              </div>
+
+              {/* Card Content */}
+              <div className="p-6 flex flex-col flex-grow">
+                <div className="flex flex-wrap items-center justify-between gap-3 mb-4">
+                  <span className="text-slate-500 text-xs font-mono">{post.date}</span>
+                  <div className="flex gap-2">
+                    {post.tags.map((tag) => (
+                      <span key={tag} className="text-cyan-400/70 text-[10px] uppercase tracking-widest font-bold">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-300 leading-tight">
+                  {post.title}
+                </h3>
+
+                <p className="text-slate-400 text-sm leading-relaxed mb-6 line-clamp-3">
+                  {post.description}
+                </p>
+
+                {/* Read More Button */}
+                <div className="mt-auto">
+                  <a
+                    href={post.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-cyan-400 font-bold text-sm group/btn hover:gap-3 transition-all duration-300"
+                  >
+                    Read More 
+                    <FiArrowRight className="text-lg group-hover/btn:translate-x-1 transition-transform" />
+                  </a>
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
     </section>
   );
 };

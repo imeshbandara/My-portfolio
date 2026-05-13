@@ -17,7 +17,7 @@ export const projectData = [
     techStack: ['MongoDB', 'Express', 'React', 'Node.js'],
     githubLink: 'https://github.com/imeshbandara/visitceylonx',
     liveLink: '#',
-    image: '/images/visitceylonx.png',
+    image: '/images/visitceylonx.jpg',
   },
   {
     id: 'scoop-heaven',
@@ -43,7 +43,7 @@ export const projectData = [
   },
   {
     id: 'architecture-group-project',
-    title: 'Architecture Group Project',
+    title: 'Stall Reservation System',
     description:
       'A collaborative project focused on modular software design using Java and Spring Boot.',
     category: 'Group',

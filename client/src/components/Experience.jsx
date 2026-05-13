@@ -1,34 +1,8 @@
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
+import { experienceData } from '@/data/portfolioData';
 
 const Experience = () => {
-  const experiences = [
-    {
-      date: '2023 - Present',
-      title: 'BSc (Hons) in Software Engineering',
-      subtitle: 'University of Kelaniya',
-      description:
-        'Focused on building strong fundamentals in software engineering, full-stack development, and system design.',
-      iconText: 'UOK',
-    },
-    {
-      date: 'Project Milestones',
-      title: 'Key Project Completions',
-      subtitle: 'Team + Individual work',
-      description:
-        "Successful completion of 'Architecture Project' and 'Scoop Heaven' with practical delivery experience and collaboration.",
-      iconText: 'PM',
-    },
-    {
-      date: 'Current',
-      title: 'Developing VisitCeylonX',
-      subtitle: 'MERN Stack',
-      description:
-        "Currently building 'VisitCeylonX' (MERN Stack) with a focus on performance, UX, and scalable backend patterns.",
-      iconText: 'MERN',
-    },
-  ];
-
   return (
     <section id="experience" className="py-24">
       <div className="max-w-6xl mx-auto px-4 md:px-12">
@@ -38,9 +12,9 @@ const Experience = () => {
 
         <div className="[&_.vertical-timeline::before]:bg-cyan-400/30">
           <VerticalTimeline>
-            {experiences.map((item) => (
+            {experienceData.map((item) => (
               <VerticalTimelineElement
-                key={`${item.date}-${item.title}`}
+                key={item.id}
                 date={item.date}
                 contentStyle={{
                   background: '#111c33',
@@ -76,4 +50,3 @@ const Experience = () => {
 };
 
 export default Experience;
-

@@ -1,7 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
-import axios from 'axios';
 
-const DEFAULT_RSS_URL =
+const RSS2JSON_URL =
   'https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@imeshbandara';
 
 function stripHtml(html = '') {
@@ -13,16 +12,16 @@ const BlogSection = ({ variant = 'section', limit = 6 }) => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
 
-  const rssUrl = DEFAULT_RSS_URL;
-
   useEffect(() => {
     let cancelled = false;
 
     const fetchMedium = async () => {
       try {
-        const res = await axios.get(rssUrl);
+        const res = await fetch(RSS2JSON_URL);
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const data = await res.json();
         if (cancelled) return;
-        setArticles(res?.data?.items ?? []);
+        setArticles(data?.items ?? []);
       } catch (err) {
         console.error('Error fetching Medium posts:', err);
         if (cancelled) return;
@@ -36,7 +35,7 @@ const BlogSection = ({ variant = 'section', limit = 6 }) => {
     return () => {
       cancelled = true;
     };
-  }, [rssUrl]);
+  }, []);
 
   const visibleArticles = useMemo(() => {
     const n = typeof limit === 'number' ? limit : 6;

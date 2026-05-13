@@ -62,7 +62,7 @@ const Home = () => {
       <Contact />
       
       <footer className="py-10 text-center text-slate-500 text-base font-mono">
-        Built with MERN Stack © 2026 Imesh Bandara
+        Built with React + Vite © 2026 Imesh Bandara
       </footer>
     </main>
   );

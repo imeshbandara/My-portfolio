@@ -50,7 +50,7 @@ export const projectData = [
     techStack: ['Java', 'Spring Boot', 'React', 'MySQL'],
     githubLink: 'https://github.com/imeshbandara/architecture_project',
     liveLink: '#',
-    image: '/images/architecture-group-project.png',
+    image: '/images/architecture-group-project.jpeg',
   },
 ];
 

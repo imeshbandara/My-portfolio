@@ -33,7 +33,7 @@ const Navbar = ()=>{
           <a href="#about" onClick={handleScroll('about')} className="text-slate-300 hover:text-cyan-400 transition">About</a>
           <a href="#experience" onClick={handleScroll('experience')} className="text-slate-300 hover:text-cyan-400 transition">Experience</a>
           <a href="#projects" onClick={handleScroll('projects')} className="text-slate-300 hover:text-cyan-400 transition">Projects</a>
-          <Link to="/blog" className="text-slate-300 hover:text-cyan-400 transition">Blog</Link>
+          <a href="#blog" onClick={handleScroll('blog')} className="text-slate-300 hover:text-cyan-400 transition">Blog</a>
           <a href="#contact" onClick={handleScroll('contact')} className="text-slate-300 hover:text-cyan-400 transition">Contact</a>
         </div>
         

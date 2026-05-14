@@ -66,15 +66,6 @@ export const experienceData = [
     icon: FaGraduationCap,
   },
   {
-    id: 'visitceylonx-2024',
-    date: '2024',
-    title: 'Development of VisitCeylonX',
-    subtitle: 'MERN Stack — AI Travel Planner',
-    description:
-      "Built 'VisitCeylonX', a full-featured Sri Lankan tourism platform with an AI-powered itinerary planner, using MongoDB, Express, React, and Node.js.",
-    icon: FaCode,
-  },
-  {
     id: 'al-results',
     date: '2022',
     title: 'G.C.E. Advanced Level (Physical Science Stream)',
@@ -82,9 +73,9 @@ export const experienceData = [
     results: [
       { subject: 'Physics', grade: 'A' },
       { subject: 'Chemistry', grade: 'B' },
-      { subject: 'Com. Maths', grade: 'C' },
+      { subject: 'Combined Maths', grade: 'C' },
     ],
-    statistics: 'Z-Score: 1.571 | District Rank: 98',
+    statistics: 'Z-score: 1.571, District Rank: 98',
     icon: FaSchool,
   },
 ];

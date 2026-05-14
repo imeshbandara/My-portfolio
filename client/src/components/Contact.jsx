@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { FiMail, FiPhone, FiMapPin, FiSend } from 'react-icons/fi';
-import { FaGithub, FaLinkedinIn, FaInstagram } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaInstagram } from 'react-icons/fa';
 
 const infoCards = [
   {
@@ -30,13 +30,13 @@ const socials = [
     label: 'GitHub',
   },
   {
-    icon: FaLinkedinIn,
-    href: 'https://linkedin.com/in/imesh-bandara-57a129388',
+    icon: FaLinkedin,
+    href: 'https://www.linkedin.com/in/imesh-bandara-57a129388',
     label: 'LinkedIn',
   },
   {
     icon: FaInstagram,
-    href: 'https://instagram.com/imeshbandara',
+    href: 'https://www.instagram.com/_its.imesh',
     label: 'Instagram',
   },
 ];
@@ -133,10 +133,10 @@ const Contact = () => {
                     key={s.label}
                     href={s.href}
                     target="_blank"
-                    rel="noreferrer"
+                    rel="noopener noreferrer"
                     aria-label={s.label}
                     className="w-11 h-11 rounded-full bg-[#1e293b] border border-slate-800 flex items-center justify-center
-                               text-slate-400 hover:text-cyan-400 hover:border-cyan-400/50 hover:-translate-y-1
+                               text-slate-400 hover:text-cyan-400 hover:border-cyan-400/50 hover:scale-110
                                transition-all duration-300"
                   >
                     <Icon className="w-5 h-5" />

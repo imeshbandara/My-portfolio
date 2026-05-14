@@ -58,21 +58,12 @@ export const projectData = [
 export const experienceData = [
   {
     id: 'uok-degree',
-    date: '2022 – Present',
+    date: '2024 – Present',
     title: 'BSc (Hons) in Software Engineering',
     subtitle: 'University of Kelaniya — Faculty of Science',
     description:
       'Pursuing a degree focused on full-stack development, software design, data structures, and scalable system architecture.',
-    iconText: 'UOK',
-  },
-  {
-    id: 'projects-2023',
-    date: '2023',
-    title: "Completed 'Scoop Heaven' & 'Architecture Project'",
-    subtitle: 'Individual + Group Milestones',
-    description:
-      "Successfully delivered the 'Scoop Heaven' ice cream shop website and a collaborative Architecture Group Project, gaining hands-on experience with PHP, MySQL, Java, and Spring Boot.",
-    iconText: 'PM',
+    icon: FaGraduationCap,
   },
   {
     id: 'visitceylonx-2024',
@@ -81,7 +72,20 @@ export const experienceData = [
     subtitle: 'MERN Stack — AI Travel Planner',
     description:
       "Built 'VisitCeylonX', a full-featured Sri Lankan tourism platform with an AI-powered itinerary planner, using MongoDB, Express, React, and Node.js.",
-    iconText: 'MERN',
+    icon: FaCode,
+  },
+  {
+    id: 'al-results',
+    date: '2022',
+    title: 'G.C.E. Advanced Level (Physical Science Stream)',
+    subtitle: 'Pinnawala Central College, Rambukkana',
+    results: [
+      { subject: 'Physics', grade: 'A' },
+      { subject: 'Chemistry', grade: 'B' },
+      { subject: 'Com. Maths', grade: 'C' },
+    ],
+    statistics: 'Z-Score: 1.571 | District Rank: 98',
+    icon: FaSchool,
   },
 ];
 
@@ -92,7 +96,7 @@ import {
   SiMongodb, SiMysql, SiPostgresql,
   SiGit, SiDocker, SiPostman, SiVite 
 } from 'react-icons/si';
-import { FaJava } from 'react-icons/fa6';
+import { FaJava, FaGraduationCap, FaSchool, FaCode } from 'react-icons/fa6';
 
 export const skillsData = {
   frontend: [
@@ -146,5 +150,14 @@ export const blogData = [
     tags:["#SoftwareLicensing", "#OpenSource", "#IntellectualProperty", "#SoftwareDevelopment", "#LegalTech", "#TechTrends"],
     link: "https://medium.com/@imeshbandara525/understanding-software-licenses-in-2025-a-guide-to-whats-out-there-41ea7d2d3dc9",
     image: "https://miro.medium.com/v2/resize:fit:640/format:webp/1*wK0KWMyuCKI4vc1KYuaoNQ.jpeg"
+  },
+  {
+    id: 4,
+    title: "Cyber Security: Essential Strategies for a Digital World",
+    description: "A comprehensive look at the fundamental pillars of modern cybersecurity. The article examines evolving threat landscapes, the importance of proactive defense mechanisms, and best practices for protecting sensitive data in an increasingly connected environment.",
+    date: "Jul 16, 2024",
+    tags:["#CyberSecurity", "#InformationSecurity", "#NetworkSecurity", "#EthicalHacking", "#DataPrivacy", "#TechSecurity"],
+    link: "https://medium.com/@imeshbandara525/cyber-security-787672138275",
+    image: "https://miro.medium.com/v2/resize:fit:720/format:webp/1*xwhVBhYHzNSA33_2whwQiA.jpeg"
   }
 ];

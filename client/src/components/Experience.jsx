@@ -17,7 +17,7 @@ const Experience = () => {
                 key={item.id}
                 date={item.date}
                 contentStyle={{
-                  background: '#111c33',
+                  background: '#1e293b',
                   color: '#e2e8f0',
                   border: '1px solid rgba(34, 211, 238, 0.25)',
                   borderRadius: '16px',
@@ -32,14 +32,50 @@ const Experience = () => {
                   boxShadow: '0 0 0 4px rgba(34, 211, 238, 0.10)',
                 }}
                 icon={
-                  <div className="h-full w-full flex items-center justify-center font-mono text-xs px-2 text-cyan-400">
-                    {item.iconText}
+                  <div className="h-full w-full flex items-center justify-center text-cyan-400">
+                    {item.icon ? <item.icon className="w-5 h-5" /> : (
+                      <span className="font-mono text-xs px-2">{item.iconText}</span>
+                    )}
                   </div>
                 }
               >
                 <h3 className="text-lg md:text-xl font-bold text-white">{item.title}</h3>
                 <h4 className="text-slate-300 text-base mt-1">{item.subtitle}</h4>
-                <p className="text-slate-400 text-lg leading-relaxed mt-4">{item.description}</p>
+                
+                {item.description && (
+                  <p className="text-slate-400 text-lg leading-relaxed mt-4">{item.description}</p>
+                )}
+
+                {item.results && (
+                  <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4">
+                    {item.results.map((res, idx) => (
+                      <div 
+                        key={idx} 
+                        className="relative group bg-[#0f172a]/80 border border-slate-800 border-t-2 border-t-cyan-400 
+                                   rounded-xl p-5 flex flex-col items-center justify-center h-28 
+                                   shadow-xl shadow-black/40 backdrop-blur-md overflow-hidden"
+                      >
+                        {/* Glassmorphism Glow */}
+                        <div className="absolute inset-0 bg-gradient-to-br from-cyan-400/5 to-transparent pointer-events-none" />
+                        
+                        <p className="text-[10px] text-slate-500 uppercase tracking-[0.2em] mb-2 font-mono text-center relative z-10">
+                          {res.subject}
+                        </p>
+                        <p className="text-3xl font-bold text-cyan-400 relative z-10 group-hover:scale-110 transition-transform duration-300">
+                          {res.grade}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+                )}
+
+                {item.statistics && (
+                  <div className="mt-6 bg-cyan-400/5 border border-cyan-400/10 rounded-xl py-3 px-6 text-center backdrop-blur-sm">
+                    <p className="text-sm font-mono text-cyan-400/90 tracking-wider uppercase">
+                      {item.statistics}
+                    </p>
+                  </div>
+                )}
               </VerticalTimelineElement>
             ))}
           </VerticalTimeline>

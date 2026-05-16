@@ -1,6 +1,12 @@
 import { useState } from 'react';
 import { FiMail, FiPhone, FiMapPin, FiSend } from 'react-icons/fi';
 import { FaGithub, FaLinkedin, FaInstagram } from 'react-icons/fa';
+import emailjs from '@emailjs/browser';
+
+// EmailJS Credentials - Replace with your actual IDs
+const EMAILJS_SERVICE_ID = 'service_23xsn4s';
+const EMAILJS_TEMPLATE_ID = 'template_s2s3su6';
+const EMAILJS_PUBLIC_KEY = 'rGF28wIahPy68F7Sb';
 
 const infoCards = [
   {
@@ -43,31 +49,52 @@ const socials = [
 
 const Contact = () => {
   const [form, setForm] = useState({ name: '', email: '', subject: '', message: '' });
-  const [sending, setSending] = useState(false);
-  const [sent, setSent] = useState(false);
+  const [isSending, setIsSending] = useState(false);
+  const [statusMessage, setStatusMessage] = useState({ type: '', text: '' });
 
   const handleChange = (e) => {
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setSending(true);
+    setIsSending(true);
+    setStatusMessage({ type: '', text: '' });
 
-    // Build a mailto link as a simple client-side send action
-    const mailtoLink = `mailto:imeshnbandara826@gmail.com?subject=${encodeURIComponent(
-      form.subject || 'Portfolio Contact'
-    )}&body=${encodeURIComponent(
-      `Name: ${form.name}\nEmail: ${form.email}\n\n${form.message}`
-    )}`;
-    window.open(mailtoLink, '_blank');
+    try {
+      const templateParams = {
+        from_name: form.name,
+        from_email: form.email,
+        subject: form.subject,
+        message: form.message,
+        to_email: 'imeshnbandara826@gmail.com',
+      };
 
-    setTimeout(() => {
-      setSending(false);
-      setSent(true);
+      await emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        templateParams,
+        EMAILJS_PUBLIC_KEY
+      );
+
+      setStatusMessage({
+        type: 'success',
+        text: "Message sent successfully! I'll get back to you within 24 hours.",
+      });
       setForm({ name: '', email: '', subject: '', message: '' });
-      setTimeout(() => setSent(false), 4000);
-    }, 600);
+    } catch (error) {
+      console.error('EmailJS Error:', error);
+      setStatusMessage({
+        type: 'error',
+        text: 'Failed to send message. Please try again or email me directly.',
+      });
+    } finally {
+      setIsSending(false);
+      // Clear success message after some time, but keep error message longer or until retry
+      if (statusMessage.type === 'success') {
+        setTimeout(() => setStatusMessage({ type: '', text: '' }), 6000);
+      }
+    }
   };
 
   return (
@@ -234,26 +261,34 @@ const Contact = () => {
             {/* Submit */}
             <button
               type="submit"
-              disabled={sending}
+              disabled={isSending}
               className="relative mt-2 w-full flex items-center justify-center gap-2 bg-cyan-500 hover:bg-cyan-400 
                          text-[#0f172a] font-bold py-3.5 rounded-lg text-base
                          transition-all duration-300 hover:shadow-lg hover:shadow-cyan-400/25 
                          disabled:opacity-60 disabled:cursor-not-allowed"
             >
-              {sending ? (
-                <span className="inline-block w-5 h-5 border-2 border-[#0f172a] border-t-transparent rounded-full animate-spin" />
+              {isSending ? (
+                <>
+                  <span className="inline-block w-5 h-5 border-2 border-[#0f172a] border-t-transparent rounded-full animate-spin" />
+                  <span>Sending...</span>
+                </>
               ) : (
                 <>
                   <FiSend className="w-4 h-4" />
-                  {sent ? 'Message Sent!' : 'Send Message'}
+                  <span>Send Message</span>
                 </>
               )}
             </button>
 
-            {/* Success toast */}
-            {sent && (
-              <div className="absolute -bottom-14 left-0 right-0 mx-auto w-fit px-5 py-2 rounded-lg bg-emerald-500/20 border border-emerald-500/40 text-emerald-400 text-sm font-mono animate-pulse">
-                ✓ Mail client opened — thanks for reaching out!
+            {/* Status Notices */}
+            {statusMessage.text && (
+              <div className={`mt-4 p-4 rounded-lg border text-sm font-medium transition-all duration-300 ${
+                statusMessage.type === 'success' 
+                  ? 'bg-cyan-400/10 border-cyan-400/30 text-cyan-400' 
+                  : 'bg-red-400/10 border-red-400/30 text-red-400'
+              }`}>
+                {statusMessage.type === 'success' ? '✓ ' : '✕ '}
+                {statusMessage.text}
               </div>
             )}
           </form>

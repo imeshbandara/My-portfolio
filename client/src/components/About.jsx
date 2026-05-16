@@ -13,9 +13,23 @@ const About = () => {
     <section id="about" className="py-24 bg-[#0f172a] overflow-hidden">
       <div className="max-w-6xl mx-auto px-4 md:px-12 text-center">
         {/* Centered Heading */}
-        <h2 className="text-4xl font-bold text-white mb-12 flex items-center justify-center">
+        <h2 className="text-4xl font-bold text-white mb-16 flex items-center justify-center">
           <span className="text-cyan-400 font-mono text-xl mr-2">01.</span> About Me
         </h2>
+
+        {/* Profile Image Container */}
+        <div className="mx-auto mb-10 flex justify-center">
+          <div className="relative group">
+            {/* Decorative border behind the image */}
+            <div className="absolute -inset-4 border-2 border-cyan-400/60 rounded-2xl translate-x-3 translate-y-3 group-hover:translate-x-0 group-hover:translate-y-0 transition-transform duration-500"></div>
+            
+            <img 
+              src="/images/profile.jpg" 
+              alt="Imesh Bandara" 
+              className="relative w-64 h-64 md:w-80 md:h-80 object-cover rounded-2xl grayscale hover:grayscale-0 transition-all duration-500 border-2 border-slate-800 bg-[#1e293b]"
+            />
+          </div>
+        </div>
 
         {/* Centered Storytelling Description */}
         <div className="max-w-3xl mx-auto text-slate-400 space-y-6 text-lg md:text-xl leading-relaxed mb-24">

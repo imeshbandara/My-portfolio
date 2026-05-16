@@ -25,7 +25,7 @@ const Navbar = ()=>{
     <nav className="fixed w-full z-50 top-0 px-6 py-4 bg-[#0f172a]/80 backdrop-blur-md border-b border-slate-800">
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         <Link to="/" className="text-3xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-         Imesh Bandara|Portfolio.
+         IB|Portfolio.
         </Link>
         
         <div className="space-x-8 hidden md:flex text-lg">
@@ -33,7 +33,7 @@ const Navbar = ()=>{
           <a href="#about" onClick={handleScroll('about')} className="text-slate-300 hover:text-cyan-400 transition">About</a>
           <a href="#experience" onClick={handleScroll('experience')} className="text-slate-300 hover:text-cyan-400 transition">Experience</a>
           <a href="#projects" onClick={handleScroll('projects')} className="text-slate-300 hover:text-cyan-400 transition">Projects</a>
-          <a href="#blog" onClick={handleScroll('blog')} className="text-slate-300 hover:text-cyan-400 transition">Blog</a>
+          <a href="#blogs" onClick={handleScroll('blogs')} className="text-slate-300 hover:text-cyan-400 transition">Blogs</a>
           <a href="#contact" onClick={handleScroll('contact')} className="text-slate-300 hover:text-cyan-400 transition">Contact</a>
         </div>
         

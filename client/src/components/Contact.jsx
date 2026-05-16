@@ -98,18 +98,19 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-24 bg-[#0f172a]">
+    <section id="contact" className="py-24 bg-transparent relative z-10">
       <div className="max-w-6xl mx-auto px-4 md:px-12">
         {/* Section Header */}
-        <h2 className="text-4xl font-bold text-white mb-16 flex items-center">
-          <span className="text-cyan-400 font-mono text-xl mr-2">05.</span> Get In Touch
+        <h2 className="text-4xl font-bold text-white mb-16 flex items-center justify-center">
+          <span className="text-cyan-400 font-mono text-xl mr-2">05.</span> 
+          <span className="cosmic-text">Get In Touch</span>
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-14">
           {/* ─── LEFT COLUMN ─── */}
           <div className="flex flex-col justify-between">
             <div>
-              <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
+              <h3 className="text-2xl md:text-3xl font-bold text-white mb-4 drop-shadow-lg">
                 Let's work together
               </h3>
               <p className="text-slate-400 text-lg leading-relaxed mb-10 max-w-md">
@@ -130,12 +131,12 @@ const Contact = () => {
                     <Wrapper
                       key={card.label}
                       {...wrapperProps}
-                      className="group flex items-center gap-5 p-4 rounded-xl bg-[#1e293b]/60 border border-slate-800 
+                      className="group flex items-center gap-5 p-4 rounded-xl glass-card
                                  hover:border-cyan-400/40 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-cyan-400/5 
                                  transition-all duration-300 cursor-pointer"
                     >
                       <div className="flex-shrink-0 w-12 h-12 rounded-full bg-cyan-400/10 flex items-center justify-center">
-                        <Icon className="w-5 h-5 text-cyan-400" />
+                        <Icon className="w-5 h-5 text-cyan-400 group-hover:drop-shadow-[0_0_8px_rgba(34,211,238,0.6)] transition-all" />
                       </div>
                       <div>
                         <p className="text-sm text-slate-500 font-mono uppercase tracking-wider">
@@ -162,9 +163,9 @@ const Contact = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={s.label}
-                    className="w-11 h-11 rounded-full bg-[#1e293b] border border-slate-800 flex items-center justify-center
+                    className="w-11 h-11 rounded-full glass-card flex items-center justify-center
                                text-slate-400 hover:text-cyan-400 hover:border-cyan-400/50 hover:scale-110
-                               transition-all duration-300"
+                               transition-all duration-300 hover:shadow-[0_0_15px_rgba(34,211,238,0.3)]"
                   >
                     <Icon className="w-5 h-5" />
                   </a>
@@ -176,11 +177,10 @@ const Contact = () => {
           {/* ─── RIGHT COLUMN — FORM ─── */}
           <form
             onSubmit={handleSubmit}
-            className="relative bg-[#1e293b] border border-slate-800 rounded-2xl p-8 md:p-10
-                       shadow-xl shadow-black/20 flex flex-col gap-5"
+            className="relative glass-card rounded-2xl p-8 md:p-10 flex flex-col gap-5 overflow-hidden"
           >
             {/* Decorative glow */}
-            <div className="absolute -inset-px rounded-2xl bg-gradient-to-br from-cyan-400/20 via-transparent to-transparent pointer-events-none" />
+            <div className="absolute -inset-px rounded-2xl bg-gradient-to-br from-cyan-400/20 via-transparent to-purple-600/10 pointer-events-none" />
 
             <h4 className="text-xl font-bold text-white mb-1 relative">Send me a message</h4>
             <p className="text-slate-500 text-sm mb-2 relative">
@@ -200,8 +200,8 @@ const Contact = () => {
                 value={form.name}
                 onChange={handleChange}
                 placeholder="John Doe"
-                className="w-full bg-[#0f172a] border border-slate-700 rounded-lg px-4 py-3 text-slate-200 placeholder-slate-600 text-base
-                           outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400/30 transition-all duration-300"
+                className="w-full bg-[#030712]/60 border border-white/10 rounded-lg px-4 py-3 text-slate-200 placeholder-slate-600 text-base
+                           outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400/30 transition-all duration-300 backdrop-blur-sm"
               />
             </div>
 
@@ -218,8 +218,8 @@ const Contact = () => {
                 value={form.email}
                 onChange={handleChange}
                 placeholder="john@example.com"
-                className="w-full bg-[#0f172a] border border-slate-700 rounded-lg px-4 py-3 text-slate-200 placeholder-slate-600 text-base
-                           outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400/30 transition-all duration-300"
+                className="w-full bg-[#030712]/60 border border-white/10 rounded-lg px-4 py-3 text-slate-200 placeholder-slate-600 text-base
+                           outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400/30 transition-all duration-300 backdrop-blur-sm"
               />
             </div>
 
@@ -235,8 +235,8 @@ const Contact = () => {
                 value={form.subject}
                 onChange={handleChange}
                 placeholder="Project Inquiry"
-                className="w-full bg-[#0f172a] border border-slate-700 rounded-lg px-4 py-3 text-slate-200 placeholder-slate-600 text-base
-                           outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400/30 transition-all duration-300"
+                className="w-full bg-[#030712]/60 border border-white/10 rounded-lg px-4 py-3 text-slate-200 placeholder-slate-600 text-base
+                           outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400/30 transition-all duration-300 backdrop-blur-sm"
               />
             </div>
 
@@ -253,8 +253,8 @@ const Contact = () => {
                 value={form.message}
                 onChange={handleChange}
                 placeholder="Hi Imesh, I'd like to discuss..."
-                className="w-full bg-[#0f172a] border border-slate-700 rounded-lg px-4 py-3 text-slate-200 placeholder-slate-600 text-base
-                           outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400/30 transition-all duration-300 resize-none"
+                className="w-full bg-[#030712]/60 border border-white/10 rounded-lg px-4 py-3 text-slate-200 placeholder-slate-600 text-base
+                           outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400/30 transition-all duration-300 resize-none backdrop-blur-sm"
               />
             </div>
 
@@ -262,30 +262,31 @@ const Contact = () => {
             <button
               type="submit"
               disabled={isSending}
-              className="relative mt-2 w-full flex items-center justify-center gap-2 bg-cyan-500 hover:bg-cyan-400 
-                         text-[#0f172a] font-bold py-3.5 rounded-lg text-base
-                         transition-all duration-300 hover:shadow-lg hover:shadow-cyan-400/25 
+              className="relative group mt-2 w-full flex items-center justify-center gap-2 cosmic-gradient
+                         text-white font-bold py-3.5 rounded-lg text-base overflow-hidden
+                         transition-all duration-300 hover:shadow-[0_0_25px_rgba(34,211,238,0.4)] 
                          disabled:opacity-60 disabled:cursor-not-allowed"
             >
+              <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors" />
               {isSending ? (
                 <>
-                  <span className="inline-block w-5 h-5 border-2 border-[#0f172a] border-t-transparent rounded-full animate-spin" />
-                  <span>Sending...</span>
+                  <span className="inline-block w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
+                  <span className="relative z-10">Sending...</span>
                 </>
               ) : (
                 <>
-                  <FiSend className="w-4 h-4" />
-                  <span>Send Message</span>
+                  <FiSend className="w-4 h-4 relative z-10" />
+                  <span className="relative z-10">Send Message</span>
                 </>
               )}
             </button>
 
             {/* Status Notices */}
             {statusMessage.text && (
-              <div className={`mt-4 p-4 rounded-lg border text-sm font-medium transition-all duration-300 ${
+              <div className={`mt-4 p-4 rounded-lg border text-sm font-medium backdrop-blur-md transition-all duration-300 animate-in fade-in slide-in-from-top-2 ${
                 statusMessage.type === 'success' 
-                  ? 'bg-cyan-400/10 border-cyan-400/30 text-cyan-400' 
-                  : 'bg-red-400/10 border-red-400/30 text-red-400'
+                  ? 'bg-cyan-400/10 border-cyan-400/30 text-cyan-400 shadow-[0_0_15px_rgba(34,211,238,0.1)]' 
+                  : 'bg-red-400/10 border-red-400/30 text-red-400 shadow-[0_0_15px_rgba(239,68,68,0.1)]'
               }`}>
                 {statusMessage.type === 'success' ? '✓ ' : '✕ '}
                 {statusMessage.text}

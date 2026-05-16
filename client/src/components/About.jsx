@@ -26,7 +26,7 @@ const About = () => {
             <img 
               src="/images/profile.jpg" 
               alt="Imesh Bandara" 
-              className="relative w-64 h-64 md:w-80 md:h-80 object-cover rounded-2xl grayscale hover:grayscale-0 transition-all duration-500 border-2 border-slate-800 bg-[#1e293b]"
+              className="relative w-[350px] h-[350px] md:w-[450px] md:h-[650px] object-cover rounded-2xl grayscale hover:grayscale-0 transition-all duration-500 border-2 border-slate-800 bg-[#1e293b]"
             />
           </div>
         </div>

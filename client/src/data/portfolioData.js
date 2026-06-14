@@ -17,7 +17,7 @@ export const projectData = [
     techStack: ['MongoDB', 'Express', 'React', 'Node.js'],
     githubLink: 'https://github.com/imeshbandara/visitceylonx',
     liveLink: '#',
-    image: '/images/visitceylonx.jpg',
+    image: '/images/visitceylonx.jpeg',
   },
   {
     id: 'scoop-heaven',

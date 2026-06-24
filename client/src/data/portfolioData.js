@@ -31,6 +31,28 @@ export const projectData = [
     image: '/images/scoop-heaven.png',
   },
   {
+  id: 'luxora-clothing',
+  title: 'Luxora Clothing',
+  description:
+    'A scalable e-commerce platform built with a microservices architecture, featuring secure authentication, real-time service communication, and optimized multi-database management.',
+  category: 'Individual',
+  techStack: [
+    'Next.js',
+    'TypeScript',
+    'Tailwind CSS',
+    'Redux',
+    'Node.js',
+    'Express.js',
+    'PostgreSQL',
+    'MongoDB',
+    'Mongoose',
+    'Turbo Repo'
+  ],
+  githubLink: 'https://github.com/imeshbandara/luxora-clothing',
+  liveLink: '#',
+  image: '/images/luxora-clothing.jpeg',
+},
+  {
     id: 'house-renting-website',
     title: 'House-renting-website',
     description:

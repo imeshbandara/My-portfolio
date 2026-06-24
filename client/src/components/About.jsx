@@ -15,9 +15,10 @@ const About = () => {
       <div className="max-w-6xl mx-auto px-6 md:px-12">
         {/* Header Section */}
         <header className="mb-20 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 tracking-tight">
-            About Me
-          </h2>
+          <h2 className="text-5xl font-bold text-white mb-16 flex items-center justify-center">
+           
+          <span className="cosmic-text">About Me</span>
+        </h2>
           <p className="text-slate-400 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
             My background, professional philosophy, and Passion for Innovative Solutions.
           </p>
@@ -27,13 +28,13 @@ const About = () => {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-16 items-center mb-24">
           {/* Left Column (Image) */}
           <div className="md:col-span-5 flex justify-center">
-            <div className="relative w-full max-w-[320px] aspect-[3/4]">
+            <div className="relative w-full max-w-[600px] aspect-[3/4]">
               {/* Gold accent block trailing behind top-left edge */}
               <div className="absolute -top-4 -left-4 w-full h-full bg-[#E5A93B] rounded-lg -z-10 shadow-lg"></div>
               <img 
                 src="/images/profile.jpg" 
-                alt="Randy G. Smith" 
-                className="w-full h-full object-cover rounded-lg border border-neutral-800 shadow-xl"
+                alt="Imesh Bandara" 
+                className="w-full h-full object-cover rounded-lg border border-neutral-900 shadow-xl"
               />
             </div>
           </div>
@@ -61,12 +62,7 @@ const About = () => {
               </div>
 
               {/* Floating white circular slider/navigation arrow button */}
-              <button 
-                className="absolute -bottom-6 -right-6 w-12 h-12 md:w-14 md:h-14 bg-white rounded-full flex items-center justify-center text-black shadow-2xl hover:bg-neutral-100 transition-colors duration-200 group focus:outline-none focus:ring-2 focus:ring-[#E5A93B]"
-                aria-label="Next slide"
-              >
-                <FiArrowRight className="text-xl md:text-2xl group-hover:translate-x-0.5 transition-transform" />
-              </button>
+              
             </div>
           </div>
         </div>

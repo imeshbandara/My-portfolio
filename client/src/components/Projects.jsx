@@ -9,8 +9,9 @@ const Projects = () => {
     <section id="projects" className="py-24 bg-[#0f172a]">
       <div className="max-w-6xl mx-auto px-4 md:px-12">
         {/* Main Header */}
-        <h2 className="text-4xl font-bold text-white mb-16 flex items-center">
-          <span className="text-cyan-400 font-mono text-xl mr-2">03.</span> Some Things I've Built
+       <h2 className="text-5xl font-bold text-white mb-16 flex items-center justify-center">
+           
+          <span className="cosmic-text">Some Things I've Built</span>
         </h2>
 
         {/* --- INDIVIDUAL PROJECTS SECTION --- */}

@@ -101,7 +101,7 @@ const Contact = () => {
     <section id="contact" className="py-24 bg-transparent relative z-10">
       <div className="max-w-6xl mx-auto px-4 md:px-12">
         {/* Section Header */}
-        <h2 className="text-4xl font-bold text-white mb-16 flex items-center justify-center">
+        <h2 className="text-5xl font-bold text-white mb-16 flex items-center justify-center">
            
           <span className="cosmic-text">Get In Touch</span>
         </h2>

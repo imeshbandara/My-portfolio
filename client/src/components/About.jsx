@@ -1,5 +1,6 @@
 import React from 'react';
 import { skillsData } from '../data/portfolioData';
+import { FiArrowRight } from 'react-icons/fi';
 
 const SkillPill = ({ icon: Icon, name }) => (
   <div className="flex items-center gap-3 px-6 py-3 md:px-8 md:py-4 glass-card rounded-xl hover:border-purple-500/50 hover:shadow-[0_0_25px_rgba(168,85,247,0.2)] transition-all duration-300 group cursor-default">
@@ -10,41 +11,64 @@ const SkillPill = ({ icon: Icon, name }) => (
 
 const About = () => {
   return (
-    <section id="about" className="py-24 bg-transparent overflow-hidden">
-      <div className="max-w-6xl mx-auto px-4 md:px-12 text-center">
-        {/* Centered Heading */}
-        <h2 className="text-4xl font-bold text-white mb-16 flex items-center justify-center">
-          <span className="text-cyan-400 font-mono text-xl mr-2">01.</span> 
-          <span className="cosmic-text">About Me</span>
-        </h2>
+     <section id="about" className="py-24 bg-transparent overflow-hidden">
+      <div className="max-w-6xl mx-auto px-6 md:px-12">
+        {/* Header Section */}
+        <header className="mb-20 text-center">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 tracking-tight">
+            About Me
+          </h2>
+          <p className="text-slate-400 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
+            My background, professional philosophy, and Passion for Innovative Solutions.
+          </p>
+        </header>
 
-        {/* Profile Image Container */}
-        <div className="mx-auto mb-10 flex justify-center">
-          <div className="relative group">
-            {/* Decorative border behind the image */}
-            <div className="absolute -inset-4 border-2 border-cyan-400/60 rounded-2xl translate-x-3 translate-y-3 group-hover:translate-x-0 group-hover:translate-y-0 transition-transform duration-500 group-hover:border-purple-500/80 group-hover:shadow-[0_0_30px_rgba(168,85,247,0.3)]"></div>
-            
-            <img 
-              src="/images/profile.jpg" 
-              alt="Imesh Bandara" 
-              className="relative w-[350px] h-[350px] md:w-[450px] md:h-[650px] object-cover rounded-2xl grayscale hover:grayscale-0 transition-all duration-500 border-2 border-white/10 bg-slate-950/40 backdrop-blur-sm"
-            />
+        {/* Content Split Layout */}
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-16 items-center mb-24">
+          {/* Left Column (Image) */}
+          <div className="md:col-span-5 flex justify-center">
+            <div className="relative w-full max-w-[320px] aspect-[3/4]">
+              {/* Gold accent block trailing behind top-left edge */}
+              <div className="absolute -top-4 -left-4 w-full h-full bg-[#E5A93B] rounded-lg -z-10 shadow-lg"></div>
+              <img 
+                src="/images/profile.jpg" 
+                alt="Randy G. Smith" 
+                className="w-full h-full object-cover rounded-lg border border-neutral-800 shadow-xl"
+              />
+            </div>
           </div>
-        </div>
 
-        {/* Centered Storytelling Description */}
-        <div className="max-w-3xl mx-auto text-slate-400 space-y-6 text-lg md:text-xl leading-relaxed mb-24">
-          <p>
-            Hello! I'm <span className="text-cyan-400 font-bold">Imesh Bandara</span>, a dedicated Software Engineering student at the 
-            <span className="text-white"> University of Kelaniya</span>. My passion lies in crafting high-performance digital experiences that merge clean code with intuitive design.
-          </p>
-          <p>
-            My journey began with a curiosity for how the web works, which quickly evolved into a rigorous academic and professional pursuit. From building AI-powered tourism platforms like 
-            <span className="text-white"> VisitCeylonX</span> to architecting robust enterprise systems, I thrive on solving complex problems with elegant solutions.
-          </p>
-          <p>
-            I specialize in the <span className="text-white font-semibold">MERN stack</span> for dynamic interfaces and <span className="text-white font-semibold">Spring Boot</span> for scalable backends, always pushing the boundaries of what's possible in modern software engineering.
-          </p>
+          {/* Right Column (Text) */}
+          <div className="md:col-span-7 relative">
+            <div className="bg-[#1a1a1a]/40 p-8 md:p-10 rounded-2xl border border-neutral-800/50 shadow-2xl relative">
+              <h3 className="text-4xl md:text-5xl font-bold text-[#E5A93B] mb-2 tracking-tight">
+                Imesh Bandara
+              </h3>
+              <h4 className="text-xl md:text-2xl font-medium text-white mb-6">
+                Softwate Engineeer
+              </h4>
+              
+              <div className="space-y-6 text-slate-300 font-sans text-base md:text-lg leading-relaxed text-left pr-4">
+                <p>
+                  Hello! I'm Imesh Bandara, a dedicated Software Engineering student at the University of Kelaniya. My passion lies in crafting high-performance digital experiences that merge clean code with intuitive design.
+                </p>
+                <p>
+                  My journey began with a curiosity for how the web works, which quickly evolved into a rigorous academic and professional pursuit. From building AI-powered tourism platforms like VisitCeylonX to architecting robust enterprise systems, I thrive on solving complex problems with elegant solutions.
+                </p>
+                <p>
+                  I specialize in the MERN stack for dynamic interfaces and Spring Boot for scalable backends, always pushing the boundaries of what's possible in modern software engineering.
+                </p>
+              </div>
+
+              {/* Floating white circular slider/navigation arrow button */}
+              <button 
+                className="absolute -bottom-6 -right-6 w-12 h-12 md:w-14 md:h-14 bg-white rounded-full flex items-center justify-center text-black shadow-2xl hover:bg-neutral-100 transition-colors duration-200 group focus:outline-none focus:ring-2 focus:ring-[#E5A93B]"
+                aria-label="Next slide"
+              >
+                <FiArrowRight className="text-xl md:text-2xl group-hover:translate-x-0.5 transition-transform" />
+              </button>
+            </div>
+          </div>
         </div>
 
         {/* Labeled Tech Rows */}

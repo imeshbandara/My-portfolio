@@ -102,7 +102,7 @@ const Contact = () => {
       <div className="max-w-6xl mx-auto px-4 md:px-12">
         {/* Section Header */}
         <h2 className="text-4xl font-bold text-white mb-16 flex items-center justify-center">
-          <span className="text-cyan-400 font-mono text-xl mr-2">05.</span> 
+           
           <span className="cosmic-text">Get In Touch</span>
         </h2>
 

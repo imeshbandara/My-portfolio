@@ -8,9 +8,10 @@ const BlogSection = () => {
       <div className="max-w-6xl mx-auto px-4 md:px-12">
         {/* Centered Heading */}
         <header className="mb-16 text-center">
-          <h2 className="text-4xl font-bold text-white flex items-center justify-center">
-            <span className="text-cyan-400 font-mono text-xl mr-2">04.</span> Useful Reads
-          </h2>
+          <h2 className="text-4xl font-bold text-white mb-16 flex items-center justify-center">
+           
+          <span className="cosmic-text">Useful Reads</span>
+        </h2>
           <p className="text-slate-400 text-lg leading-relaxed mt-4 max-w-2xl mx-auto">
             Insights, tutorials, and perspectives on modern software development.
           </p>
